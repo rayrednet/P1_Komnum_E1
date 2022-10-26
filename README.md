@@ -27,7 +27,7 @@ Praktikum Komputasi Numerik 2022
    c. Jika f(x<sub>n</sub>) x f(x<sub>n+1</sub>) = 0 <br> 
       Akar persamaan adalah x<sub>t</sub>, dan hitungan selesai
 4. Kembali ke langkah 2 untuk menghitung nilai perkiraan akar yang baru
-5. Jika nilai yang didapat pada no. 4 sudah sesuai dengan batasan yang ditentukan, maka proses selesai dan x<sub>t/sub> adalah akar yang dicari.
+5. Jika nilai yang didapat pada no. 4 sudah sesuai dengan batasan yang ditentukan, maka proses selesai dan x<sub>t</sub> adalah akar yang dicari.
       
 ## Source Code Iterasi Numerik
 
