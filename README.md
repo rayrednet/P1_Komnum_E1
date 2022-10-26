@@ -61,7 +61,7 @@ if i == iterasi_maks - 1:
 print("\n")
 ```
 
-Contoh input x1 = 0.5 dan x2 = 2, diperoleh output sebagai berikut:
+Contoh input `x1 = 0.5` dan `x2 = 2`, diperoleh output sebagai berikut:
 
 <img width="717" alt="image" src="https://user-images.githubusercontent.com/89933907/197981885-da6f3dfc-307d-405d-a91e-b997f58a7437.png">
 
