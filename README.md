@@ -34,6 +34,8 @@ Jika gambar screenshot kurang jelas, klik gambar agar lebih jelas
       
 ## Penyelesaian
 
+Untuk membuat penyelesaian akar dengan metode Bolzano, kami menggunakan bahasa pemrograman `C++` untuk membuat `iterasinya`.
+
 Langkah pertama yang dilakukan adalah mendeklarasikan `presisi angka` yang diinginkan dan `banyaknya iterasi` yang dilakukan, serta fungsi yang akan dipakai pada program ini.
 ```ruby
 int max_iteration = 1000; 
@@ -106,7 +108,9 @@ else
         }
     }
   ```
-    
+ 
+ Setelah didapatkan akar yang dicari, kita harus membuat `grafik dari fungsi` yang dipakai. Untuk membuat grafik, kami menggunakan bahasa pemrograman `Python` dengan dua library, yaitu:
+ 
  ## Contoh Kasus
    
  Sebagai contoh, kita masukkan nilai `x1` adalah `1.5` dan `x2` adalah `1.7`, akan diperoleh hasil output sebagai berikut:
