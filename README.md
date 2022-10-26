@@ -155,3 +155,7 @@ plt.show()
 <img width="578" alt="image" src="https://user-images.githubusercontent.com/89933907/198072247-1ecb2ceb-7f70-4f33-993f-22ed69870f1e.png">
 
 Maka dari output tersebut akar yang dicari dari persamaan tersebut adalah `1.532088886201382`
+
+Serta grafik yang diperoleh dari fungsi tersebut adalah sebagai berikut
+
+![python graph](https://user-images.githubusercontent.com/89933907/198080034-f8a788e3-5c2a-4a71-b48c-ee3eda41a46f.jpg)
