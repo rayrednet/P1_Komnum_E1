@@ -110,3 +110,4 @@ else
   
  <img width="562" alt="image" src="https://user-images.githubusercontent.com/89933907/198071029-922d0ed8-717f-4e2e-9fa2-c8fdeb35e85f.png">
 
+Maka dari output tersebut akar yang dicari dari persamaan tersebut adalah `1.532088886201382`
