@@ -111,6 +111,43 @@ else
  
  Setelah didapatkan akar yang dicari, kita harus membuat `grafik dari fungsi` yang dipakai. Untuk membuat grafik, kami menggunakan bahasa pemrograman `Python` dengan dua library, yaitu:
  
+ ```ruby
+import numpy as np
+import matplotlib.pyplot as plt
+```
+Library `numpy` berguna untuk menghasilkan x pada interval tertentu, sedangkan library `matplotlib` berguna untuk membuat grafik.
+
+Setelah itu, gunakan library numpy untuk menghasilkan `300 titik uji` pada interval `-10 hingga 10`
+
+```ruby
+x = np.linspace(-10, 10, 300); 
+```
+
+Selanjutnya, `definisikan fungsi` yang akan dibuat grafiknya. Kami menggunakan fungsi yang sama seperti pada iterasi metode Bolzano yakni pada ppt Komnum2 soal 3a
+
+```ruby
+y = (pow(x,3)-(3*x)+1)
+```
+
+Langkah selanjutnya adalah mengatur bidang grafik untuk membuat kanvas grafik dan sumbu x dan y harus berada di tengah
+
+```ruby
+fig = plt.figure() #graphic canvas
+ax = fig.add_subplot(1, 1, 1) 
+
+ax.spines['left'].set_position('center')
+ax.spines['bottom'].set_position('center')
+ax.spines['right'].set_color('none')
+ax.spines['top'].set_color('none')
+```
+
+Langkah terakhir, lakukan plotting pada kanvas grafik pada diagram kartesisus dengan tipe 'y', dan tampilkan plot
+
+```ruby
+plt.plot(x, y, 'y')
+plt.show()
+```
+
  ## Contoh Kasus
    
  Sebagai contoh, kita masukkan nilai `x1` adalah `1.5` dan `x2` adalah `1.7`, akan diperoleh hasil output sebagai berikut:
