@@ -15,9 +15,9 @@ Praktikum Komputasi Numerik 2022
 ####  Metode bolzano adalah pembagi interval atau metode yang digunakan untuk mencari akar - akar persamaan nonlinear melalui proses iterasi. Metode bolzano sering disebut dengan metode setengah interval (_interval harving_), metode bagi dua, metode biseksi, atau metode pemotongan biner.
 
 #### Langkah - langkah yang harus dilakukan pada Metode Bolzano adalah sebagai berikut :
-1. Hitung fungsi pada intercal yang sama dari x terjadi perubahan tanda dari f(x<sub>n</sub>) dan f(x<sub>n+1</sub>). Atau dengan kata lain : f(x<sub>n</sub>) x f(x<sub>n+1</sub>) < 0
-2. Estimasi pertama untuk akar persamaan dapat diperoleh melalui : x<sub>t</sub> = (x<sub>n</sub> + x<sub>n+1</sub>) /2
-3. Lakukan evaluasi untuk menentukan dalam interval mana akar persamaan berada : <br>
+1. `Hitung fungsi` pada interval yang sama dari x terjadi perubahan tanda dari f(x<sub>n</sub>) dan f(x<sub>n+1</sub>). Atau dengan kata lain : f(x<sub>n</sub>) x f(x<sub>n+1</sub>) < 0
+2. `Estimasi` pertama untuk `akar persamaan` dapat diperoleh melalui : x<sub>t</sub> = (x<sub>n</sub> + x<sub>n+1</sub>) /2
+3. Lakukan `evaluasi` untuk menentukan dalam interval mana akar persamaan berada : <br>
    a. Jika f(x<sub>n</sub>) x f(x<sub>n+1</sub>) < 0 <br>
       Akar persamaan dalam sub-interval pertama, tetapkan x<sub>n+1</sub> = x<sub>t</sub><br>
       Lalu lanjutkan ke langkah yang ke-4 <br>
@@ -104,9 +104,10 @@ else
     }
     ```
     
-   ## Contoh Kasus
    
-  Sebagai contoh, kita masukkan nilai `x1` adalah `1.5` dan `x2` adalah `1.7`, akan diperoleh hasil output sebagai berikut:
+ ## Contoh Kasus
+   
+ Sebagai contoh, kita masukkan nilai `x1` adalah `1.5` dan `x2` adalah `1.7`, akan diperoleh hasil output sebagai berikut:
   
-  <img width="562" alt="image" src="https://user-images.githubusercontent.com/89933907/198071029-922d0ed8-717f-4e2e-9fa2-c8fdeb35e85f.png">
+ <img width="562" alt="image" src="https://user-images.githubusercontent.com/89933907/198071029-922d0ed8-717f-4e2e-9fa2-c8fdeb35e85f.png">
 
