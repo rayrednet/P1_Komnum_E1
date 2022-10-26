@@ -1,6 +1,9 @@
 # P1_Komnum_E1
 Praktikum Komputasi Numerik 2022
 
+### Notes
+Jika gambar screenshot kurang jelas, klik gambar agar lebih jelas
+
 ## Identitas Kelompok 1 (Komputasi Numerik E)
 | Name           | NRP        |
 | ---            | ---        |
