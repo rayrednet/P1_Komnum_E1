@@ -11,6 +11,8 @@ Praktikum Komputasi Numerik 2022
 ## Perintah Soal
 > Anda sudah mengerti algoritma pemrosesan metode Bolzano, dan Anda sudah memahami cara kerjanya. Sekarang Anda tinggal mengimplementasikan algoritma tersebut menjadi sebuah program komputer metode Bolzano (yang dapat menampilkan proses iteratif numerik, lengkap dengan grafik fungsinya)
 
+## Penjelasan Singkat Metode Bolzano
+
 ## Source Code Iterasi Numerik
 
 ```ruby
