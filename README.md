@@ -103,3 +103,10 @@ else
         }
     }
     ```
+    
+   ## Contoh Kasus
+   
+  Sebagai contoh, kita masukkan nilai `x1` adalah `1.5` dan `x2` adalah `1.7`, akan diperoleh hasil output sebagai berikut:
+  
+  <img width="562" alt="image" src="https://user-images.githubusercontent.com/89933907/198071029-922d0ed8-717f-4e2e-9fa2-c8fdeb35e85f.png">
+
