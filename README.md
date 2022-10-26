@@ -61,6 +61,11 @@ if i == iterasi_maks - 1:
 print("\n")
 ```
 
+Contoh input x1 = 0.5 dan x2 = 2, diperoleh output sebagai berikut:
+
+<img width="717" alt="image" src="https://user-images.githubusercontent.com/89933907/197981885-da6f3dfc-307d-405d-a91e-b997f58a7437.png">
+
+
 ## Source Code Grafik Fungsi
 
 ```ruby
@@ -89,3 +94,8 @@ plt.plot(x, y, 'r')
 # show the plot
 plt.show()
 ```
+Jika code iterasi fungsi dijalankan maka grafik akan langsung keluar, berdasarkan contoh kasus tersebut didapatkan grafik sebagai berikut:
+
+![WhatsApp Image 2022-10-26 at 15 50 36](https://user-images.githubusercontent.com/89933907/197982430-c06df7cc-60a1-42e8-9056-1e6e1f9c0620.jpg)
+
+
