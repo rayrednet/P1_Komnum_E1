@@ -158,4 +158,6 @@ Maka dari output tersebut akar yang dicari dari persamaan tersebut adalah `1.532
 
 Serta grafik yang diperoleh dari fungsi tersebut adalah sebagai berikut
 
-![python graph](https://user-images.githubusercontent.com/89933907/198080034-f8a788e3-5c2a-4a71-b48c-ee3eda41a46f.jpg)
+![python graph](https://user-images.githubusercontent.com/89933907/198080782-f10a2529-1897-4e36-901f-5972d65df769.jpg)
+
+
