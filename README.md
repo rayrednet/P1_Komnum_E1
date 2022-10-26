@@ -29,91 +29,77 @@ Praktikum Komputasi Numerik 2022
 4. Kembali ke `langkah 2` untuk menghitung nilai perkiraan `akar yang baru`
 5. Jika nilai yang didapat pada no. 4 sudah `sesuai` dengan batasan yang ditentukan, maka `proses selesai` dan x<sub>t</sub> adalah akar yang dicari.
       
-## Source Code Iterasi Numerik
+## Penyelesaian
 
+Langkah pertama yang dilakukan adalah mendeklarasikan `presisi angka` yang diinginkan dan `banyaknya iterasi` yang dilakukan, serta fungsi yang akan dipakai pada program ini.
 ```ruby
-import numpy as np
-import matplotlib.pyplot as plt
- 
-#Mendefinisikan fungsi
-def f(x):
-    return (1 - (0.6 * x)) / x
- 
-iterasi_maks = 50 
-ketelitian = 10E-6  
-x1 = float(input("Masukkan x1: "))       
-x2 = float(input("Masukkan x2: "))      
- 
-# Memeriksa apakah value x1 dan x2 sesuai syarat
-if f(x1) * f(x2) > 0:
-    print('Angka tidak memenuhi kriteria bolzano (bertanda sama)')
-    exit()
- 
+int max_iteration = 1000; 
+double precision = 10E-10;
 
-print('----------------------------------------------------------------------------')
-print('iterasi \t x1\t\t x2\t\t xt\t\t f(xt)        ')
-print('----------------------------------------------------------------------------')
-
-for i in range(iterasi_maks):
-    xt = (x1 + x2)/2
-
-    # Output hasil sesuai iterasi
-    print(str(i + 1)+'\t\t% 10.8f\t% 10.8f\t% 10.8f\t% 10.8f\t' %(x1, x2, xt, f(xt)))
- 
-    if np.abs(f(xt)) < ketelitian:
-        print('----------------------------------------------------------------------------')
-        print('Nilai akar: '+ str(xt))
-        exit()
-
-    if f(x1) * f(xt) < 0:
-        x2 = xt
-
-    else: 
-        x1 = xt
- 
-print('----------------------------------------------------------------------------')
-if i == iterasi_maks - 1:
-    print('\n\nIterasi maksimum!!!')
-    print('Nilai akar: '+ str(xt))
-
-print("\n")
+//for example we use problem in ppt Komnum2 number 3a
+double f(double x)
+{
+    return (pow(x,3)-(3*x)+1);
+}
 ```
 
-Contoh input `x1 = 0.5` dan `x2 = 2`, diperoleh output sebagai berikut:
-
-<img width="717" alt="image" src="https://user-images.githubusercontent.com/89933907/197981885-da6f3dfc-307d-405d-a91e-b997f58a7437.png">
-
-
-## Source Code Grafik Fungsi
+Langkah kedua, deklarasikan nilai `x1 dan x2`, yang dimana hasilnya dimasukkan ke dalam fungsi menjadi variabel `a dan b`
 
 ```ruby
-import numpy as np
-import matplotlib.pyplot as plt
+double x1, x2;
+    printf ("Input x1: ");
+    scanf ("%lf", &x1);
+    printf ("Input x2: ");
+    scanf ("%lf", &x2);
 
-x = np.linspace(-5, 5, 100) 
-
-y = (1 - (0.6 * x)) / x
-
-# mengatur axis di pusat
-fig = plt.figure()
-ax = fig.add_subplot(1, 1, 1)
-
-ax.spines['left'].set_position('center')
-ax.spines['bottom'].set_position('zero')
-
-ax.spines['right'].set_color('none')
-ax.spines['top'].set_color('none')
-
-ax.xaxis.set_ticks_position('bottom')
-ax.yaxis.set_ticks_position('left')
-
-plt.plot(x, y, 'r')
-
-# show the plot
-plt.show()
+    double a, b;
+    a = f(x1);
+    b = f(x2);
 ```
-Jika code iterasi fungsi dijalankan maka grafik akan langsung keluar, berdasarkan contoh kasus tersebut didapatkan grafik sebagai berikut:
 
-![WhatsApp Image 2022-10-26 at 15 50 36](https://user-images.githubusercontent.com/89933907/197982430-c06df7cc-60a1-42e8-9056-1e6e1f9c0620.jpg)
+Setelah itu, `cek nilai x1 dan x2` sebagai parameter Bolzano yang ketika dimasukkan ke dalam fungsi memiliki nilai dengan `tanda berlawanan`
 
+```ruby
+if(a * b > 0) 
+        puts("The numbers don't meet the Bolzano requirement by having the same sign");
+```
 
+Jika nilai `x1 dan x2 tidak sesuai kriteria`, maka tampilkan `pesan error` seperti yang tertera di atas. Selain itu, maka program dapat dijalankan dengan mengikuti `tahap perhitungan metode Bolzano`
+
+```ruby
+else
+    {
+        puts("-------------------------------------------------------------------------------------------------------------------------------------------------------------");
+        printf("iteration \t      x1\t\t     x2\t\t\t      xt\t\t     f(x1)\t\t     f(x2)\t\t     f(xt)\t\t\t");
+        puts("");
+        puts("-------------------------------------------------------------------------------------------------------------------------------------------------------------");
+
+        double xt;
+        for(int i = 1; i <= max_iteration; i++)
+        {
+            xt = (x1 + x2) / 2;
+            printf("  %d \t\t %.10lf\t\t %.10lf\t\t %.10lf\t\t %.10lf\t\t %.10lf\t\t %.10lf\t\t", i, x1, x2, xt, a, b, f(xt));
+            puts("");
+
+            //substitute xt with new boundaries near 0
+            if((a >= 0 && f(xt) >= 0) || (a <= 0 && f(xt) <= 0))
+            {
+                x1 = xt;
+                a = f(xt);
+            }
+            else 
+            {
+                x2 = xt;
+                b = f(xt);
+            }
+
+            //end the program if f(xt) value already near the precision we wanted
+            if(abs(f(xt)) < precision)
+            {
+                puts("-------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                printf("Root: %.15lf\n", xt);
+                break;
+            }   
+        }
+    }
+    ```
