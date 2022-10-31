@@ -133,10 +133,15 @@ Langkah selanjutnya adalah mengatur bidang grafik untuk membuat kanvas grafik da
 
 ```ruby
 fig = plt.figure() #graphic canvas
-ax = fig.add_subplot(1, 1, 1) 
+ax = fig.add_subplot(1, 1, 1) #we only need 1 graph with 1 row and 1 column
 
+#set main y in center
 ax.spines['left'].set_position('center')
+
+#set main x in center
 ax.spines['bottom'].set_position('center')
+
+#give transparent color to lines that we don't need
 ax.spines['right'].set_color('none')
 ax.spines['top'].set_color('none')
 ```
